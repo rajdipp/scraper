@@ -104,7 +104,7 @@ games_available = True
 
 current_game = 0  # Specific game we are ready to scrape. Used with start_game
 games_scraped = 0  # Count of how many games we have scraped so far
-vgchartz_page = 4  # Which VGChartz Page are we on
+vgchartz_page = 1  # Which VGChartz Page are we on
 
 # Open our CSV file and write the headers
 now = datetime.datetime.now()
