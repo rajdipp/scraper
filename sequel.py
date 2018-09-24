@@ -26,7 +26,7 @@ def isSequel(game, games):
 	pattern = re.compile(r'\s\d*$|\s[IVX]$') # Match any number or roman numeral at the end of the game name
 	match = pattern.search(name)
 	if match:
-		print "'" + name + "' may be a sequel because of number at end"
+		print ("'" + name + "' may be a sequel because of number at end")
 	
 	# Does the name of the game match the name of any other earlier games?
 	for othergame in games:
@@ -34,7 +34,7 @@ def isSequel(game, games):
 		if len(name) >= len(othername):
 			if othername in name and game != othergame:
 				if game.year > othergame.year and game.platform == othergame.platform:
-					print "'" + name + " (" + game.year + ")' may be a sequel of '" + othername + " (" + othergame.year + ")'"
+					print ("'" + name + " (" + game.year + ")' may be a sequel of '" + othername + " (" + othergame.year + ")'")
 					break
 
 	return False
